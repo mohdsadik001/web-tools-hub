@@ -15,7 +15,7 @@ const Navbar = () => {
          className='text-3xl font-semibold cursor-pointer'><span className='text-primary font-bold'>WebTools</span> Hub</h1>
          <div className='hidden sm:flex items-center gap-8'>
             <Link to='/'>Home</Link>
-            <Link to='/tools'>All Tools</Link>
+            <Link to='/tools' onClick={() => setSearchQuery("")}>All Tools</Link>
             {/* <Link to='/categories'>Categories</Link> */}
             <Link to='/contact'>Contact</Link>
         </div>
