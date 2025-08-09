@@ -29,8 +29,8 @@ const QrCodeGenerator = () => {
   };
 
   return (
-    <div className="mt-16 px-6 md:px-16 lg:px-24 xl:px-32 py-4 flex flex-col items-center">
-      <h2 className="text-2xl font-medium uppercase mb-4">📲 QR Code Generator</h2>
+    <div className="mt-2 md:mt-16 px-6 md:px-16 lg:px-24 xl:px-32 py-4 flex flex-col items-center">
+      <h2 className="text-lg md:text-2xl font-medium uppercase mb-4">📲 QR Code Generator</h2>
 
       <input
         type="text"

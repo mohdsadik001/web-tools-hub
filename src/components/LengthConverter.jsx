@@ -53,9 +53,8 @@ const LengthConverter = () => {
   };
 
   return (
-    <div className="mt-10 px-4 md:px-16 lg:px-24 xl:px-32 py-6">
-      <h2 className="text-3xl font-bold text-center mb-6 text-primary">📏 Length Converter</h2>
-
+    <div className=" p-2 md:p-16">
+      <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-primary">📏 Length Converter</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center mb-4">
         <input
           type="number"

@@ -44,8 +44,8 @@ const Base64Encoder = () => {
   };
 
   return (
-    <div className="mt-16 px-6 md:px-16 lg:px-24 xl:px-32 py-6">
-      <h2 className="text-3xl font-bold text-center text-primary mb-6">
+    <div className="w-full md:px-16">
+      <h2 className="text-xl md:text-3xl font-bold text-center text-primary mb-2 md:mb-4">
         🧬 Base64 Encoder
       </h2>
 
@@ -54,10 +54,10 @@ const Base64Encoder = () => {
         onChange={handleChange}
         placeholder="Enter text to encode..."
         rows={6}
-        className="w-full border border-gray-300 rounded p-4 text-lg focus:outline-primary resize-none"
+        className="w-full border border-gray-300 rounded p-2 md:p-4 text-base md:text-lg focus:outline-primary resize-none"
       />
 
-      <div className="flex flex-wrap gap-4 mt-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 mt-2 md:mt-4">
         <button
           onClick={handleCopy}
           className="bg-primary text-white px-4 py-2 rounded hover:bg-primary-dull transition"

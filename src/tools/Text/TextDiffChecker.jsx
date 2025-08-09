@@ -76,32 +76,32 @@ const TextDiffChecker = () => {
   };
 
   return (
-    <div className="mt-16 px-6 md:px-16 lg:px-24 xl:px-32 py-6">
-      <h2 className="text-3xl font-bold text-primary text-center mb-6">
-        📝 Enhanced Text Difference Checker
-      </h2>
-
-      <div className="grid md:grid-cols-2 gap-4 mb-4">
+    <div className="mt-2 md:mt-16 px-6 md:px-16 lg:px-24 xl:px-32 py-6">
+      <div className="flex flex-col items-end w-max">
+        <p className="text-lg text-wrap md:text-2xl font-medium uppercase">📝 Text Difference Checker</p>
+        <div className="w-16 h-0.5 bg-primary rounded-full"></div>
+      </div>
+      <div className="grid md:grid-cols-2 gap-2 md:gap-4 mb-2 md:mb-4 mt-2">
         <textarea
           value={textA}
           onChange={(e) => setTextA(e.target.value)}
           placeholder="Enter original text..."
-          className="w-full border border-gray-300 rounded p-4 text-base focus:outline-primary resize-none"
+          className="w-full border border-gray-300 rounded p-2 md:p-4 text-base focus:outline-primary resize-none"
           rows={8}
         />
         <textarea
           value={textB}
           onChange={(e) => setTextB(e.target.value)}
           placeholder="Enter modified text..."
-          className="w-full border border-gray-300 rounded p-4 text-base focus:outline-primary resize-none"
+          className="w-full border border-gray-300 rounded p-2 md:p-4 text-base focus:outline-primary resize-none"
           rows={8}
         />
       </div>
 
-      <div className="grid grid-cols-2 gap-4 mb-4">
+      <div className="grid grid-cols-2 gap-2 md:gap-4 mb-2 md:mb-4">
         <button
           onClick={generateDiff}
-          className="bg-primary text-white px-6 py-2 rounded hover:bg-primary-dull transition"
+          className="bg-primary cursor-pointer text-white px-2 md:px-6 py-1 md:py-2 rounded hover:bg-primary-dull transition"
         >
           🔍 Compare Text
         </button>
@@ -109,7 +109,7 @@ const TextDiffChecker = () => {
         <button
           onClick={copyToClipboard}
           disabled={!diffResult.length}
-          className={`px-6 py-2 rounded border ${
+          className={`px-2 py-1 md:py-2  rounded border ${
             diffResult.length
               ? "border-primary text-primary hover:bg-primary hover:text-white transition cursor-pointer"
               : "border-gray-300 text-gray-300 cursor-not-allowed"
@@ -121,7 +121,7 @@ const TextDiffChecker = () => {
         <button
           onClick={exportToFile}
           disabled={!diffResult.length}
-          className={`px-6 py-2 rounded border ${
+          className={`px-2 py-1 md:py-2 rounded border ${
             diffResult.length
               ? "border-primary text-primary hover:bg-primary hover:text-white transition cursor-pointer"
               : "border-gray-300 text-gray-300 cursor-not-allowed"
@@ -133,7 +133,7 @@ const TextDiffChecker = () => {
         <select
           value={diffMode}
           onChange={(e) => setDiffMode(e.target.value)}
-          className="border border-gray-300 rounded px-3 py-2"
+          className="border border-gray-300 rounded px-2 py-1 md:py-2"
         >
           <option value="word">Word-level Diff</option>
           <option value="char">Character-level Diff</option>
@@ -141,7 +141,7 @@ const TextDiffChecker = () => {
       </div>
 
       {diffResult.length > 0 && (
-        <div className="grid md:grid-cols-2 gap-4 bg-gray-50 border border-gray-300 p-4 pb-12 rounded overflow-auto max-h-96">
+        <div className="grid md:grid-cols-2 gap-2 md:gap-4 bg-gray-50 border border-gray-300 p-4 pb-18 rounded overflow-auto max-h-96">
           <div>
             <h4 className="font-semibold mb-2 text-center">Original Text</h4>
             <div className="whitespace-pre-wrap border p-3 rounded bg-white text-sm font-mono h-full overflow-auto">
@@ -161,7 +161,7 @@ const TextDiffChecker = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-2 text-center">Modified Text</h4>
+            <h4 className="font-semibold mb-2 mt-8 text-center">Modified Text</h4>
             <div className="whitespace-pre-wrap border p-3 rounded bg-white text-sm font-mono h-full overflow-auto">
               {diffResult.map((part, i) =>
                 part.added ? (

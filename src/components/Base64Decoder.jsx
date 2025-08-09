@@ -23,7 +23,7 @@ const Base64Decoder = () => {
         }}
         placeholder="Paste Base64 encoded text..."
         rows={6}
-        className="w-full border border-gray-300 rounded p-4 text-lg focus:outline-primary resize-none"
+        className="w-full border border-gray-300 rounded p-2 md:p-4 text-base md:text-lg focus:outline-primary resize-none"
       />
       <div className="mt-4">
         <label className="block font-semibold mb-2 text-gray-700">

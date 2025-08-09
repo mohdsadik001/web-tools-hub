@@ -75,8 +75,8 @@ const MassConverter = () => {
     massUnits.find((u) => u.value === unitValue)?.description;
 
   return (
-    <div className="mt-16 px-6 md:px-16 lg:px-24 xl:px-32 py-6">
-      <h2 className="text-3xl font-bold text-center text-primary mb-6">
+    <div className="md:mt-16 px-6 md:px-16 lg:px-24 xl:px-32">
+      <h2 className="text-2xl md:text-3xl font-bold text-center text-primary mb-6">
         ⚖️ Mass Converter
       </h2>
 

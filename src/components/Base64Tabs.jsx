@@ -9,12 +9,13 @@ const Base64Tabs = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <div className="mt-16 px-4 md:px-10 py-6">
-      <h1 className="text-3xl font-bold text-center text-primary mb-6">
-        🧬 Base64 Toolkit
-      </h1>
+    <div className="mt-2 md:mt-16 px-4 md:px-10 py-6">
+        <div className="flex flex-col items-end w-max">
+        <p className="text-lg md:text-2xl font-medium uppercase">🧬 Base64 Toolkit</p>
+        <div className="w-16 h-0.5 bg-primary rounded-full"></div>
+      </div>
 
-      <div className="flex justify-center mb-6">
+      <div className="flex justify-center mb-3 mb:mb-6 mt-3">
         {tabs.map((tab, index) => (
           <button
             key={index}
@@ -30,7 +31,7 @@ const Base64Tabs = () => {
         ))}
       </div>
 
-      <div className="bg-white p-4 border rounded shadow">
+      <div className="bg-white p-2 md:p-4 border rounded shadow">
         {activeTab === 0 && <Base64Encoder />}
         {activeTab === 1 && <Base64Decoder />}
         {activeTab === 2 && <FileToBase64 />}

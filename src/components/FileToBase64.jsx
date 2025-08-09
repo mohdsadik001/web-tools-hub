@@ -21,7 +21,7 @@ const FileToBase64 = () => {
   };
 
   return (
-    <div>
+    <div className="overflow-scroll">
       <input
         type="file"
         onChange={handleFileChange}
