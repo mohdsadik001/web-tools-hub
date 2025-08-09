@@ -14,7 +14,7 @@ const customStyles = {
   }),
   menu: (base) => ({
     ...base,
-    zIndex: 999,
+    zIndex: 10,
   }),
 };
 
