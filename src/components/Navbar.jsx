@@ -26,7 +26,7 @@ const Navbar = () => {
          {/* Menu Items (Mobile) */}
          {
             isOpen && 
-                <div className='flex flex-col absolute w-60 shadow-2xl top-[8vh] bg-white left-0 px-6 transition all duration-200 gap-4 h-screen py-6 items-start md:hidden '>
+                <div className='flex flex-col absolute z-50 w-60 shadow-2xl top-[8vh] bg-white left-0 px-6 transition all duration-200 gap-4 h-screen py-6 items-start md:hidden '>
                     <Link className='w-full text-primary border-b py-2 px-3 rounded ' onClick={() => setIsOpen(false)} to='/'>Home</Link>
                     <Link className='w-full text-primary border-b py-2 px-3 rounded ' onClick={() => setIsOpen(false)} to='/tools'>All Tools</Link>
                     <Link className='w-full text-primary border-b py-2 px-3 rounded ' onClick={() => setIsOpen(false)} to='/contact'>Contact</Link>
