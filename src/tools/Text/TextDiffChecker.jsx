@@ -98,7 +98,7 @@ const TextDiffChecker = () => {
         />
       </div>
 
-      <div className="flex justify-center gap-4 mb-4">
+      <div className="grid grid-cols-2 gap-4 mb-4">
         <button
           onClick={generateDiff}
           className="bg-primary text-white px-6 py-2 rounded hover:bg-primary-dull transition"

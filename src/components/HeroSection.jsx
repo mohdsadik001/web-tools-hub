@@ -3,10 +3,10 @@ import { useAppContext } from "../Context/AppContext";
 const HeroSection = () => {
   const { navigate } = useAppContext();
   return (
-    <div className="bg-gradient-to-br from-green-50 to-indigo-100 py-20 h-[92vh]">
+    <div className="bg-gradient-to-br from-green-50 to-indigo-100 py-6 md:py-20 h-screen md:h-[92vh overflow-scroll">
       <div className="container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-6xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             All <span className="text-primary">Online Tools</span> in "One Box"
           
           </h1>
@@ -30,7 +30,7 @@ const HeroSection = () => {
           
 
           {/* Category Icons */}
-          <div className="flex justify-center items-center gap-20 mt-30 text-gray-400">
+          <div className="flex flex-col justify-start items-start gap-6 mt-12 md:flex-row md:flex-wrap lg:flex-nowrap md:gap-18 text-nowrap md:mt-30 text-gray-400">
             <div className="flex items-center gap-2">
               <div className="w-12 h-12 bg-blue-100 rounded flex items-center justify-center">
                 <span className="text-blue-600 text-xl">📝</span>

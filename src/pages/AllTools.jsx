@@ -18,12 +18,12 @@ const AllTools = () => {
     }
   }, [allTools, searchQuery]);
   return (
-   <div className="mt-16 flex flex-col px-6 md:px-16 lg:px-24 xl:px-32 py-4">
+   <div className="mt-4 md:mt-16 md:px-12 flex flex-col px-4 py-4">
         <div className='flex flex-col items-end w-max'>
             <p className='text-2xl font-medium uppercase'>All Tools</p>
             <div className='w-16 h-0.5 bg-primary rounded-full'></div>
         </div>
-        <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-6 lg:grid-cols-3 mt-6'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3  mt-6'>
             {filteredTools.filter((tool) => tool.name).map((tool,index) => (
                 <ToolCard key={index} tool={tool} />
             ))}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Select from "react-select";
 import { countriesList } from "../../assets/countries-list";
 
@@ -63,13 +63,13 @@ const CurrencyConverter = () => {
   };
 
   return (
-    <div className="mt-16 flex flex-col px-6 md:px-16 lg:px-24 xl:px-32 py-4">
+    <div className="mt-2 md:mt-16 flex flex-col px-6 md:px-16 lg:px-24 xl:px-32 py-4">
       <div className="flex flex-col items-end w-max">
-        <p className="text-2xl font-medium uppercase">💸 Currency Converter</p>
+        <p className="text-lg md:text-2xl font-medium uppercase">💸 Currency Converter</p>
         <div className="w-16 h-0.5 bg-primary rounded-full"></div>
       </div>
 
-      <div className="grid grid-cols-3 gap-4 mt-4">
+      <div className="grid grid-rows-3 md:grid-rows-1 md:grid-cols-3 gap-2 md:gap-4 mt-2 md:mt-4">
         <div>
           <p>Amount</p>
           <input value={amount} onChange={(e) => setAmount(e.target.value)} className="border border-gray-400 px-2 py-3 rounded outline-primary w-full" type="number" placeholder="Amount" />
@@ -98,19 +98,19 @@ const CurrencyConverter = () => {
 
       <button
         onClick={convertCurrency}
-        className="flex gap-4 mt-4 items-center justify-center cursor-pointer w-full px-2 py-3 rounded bg-primary hover:bg-primary-dull transition text-white text-xl"
+        className="flex gap-1 md:gap-4 mt-2 md:mt-4 items-center justify-center cursor-pointer w-full px-2 py-3 rounded bg-primary hover:bg-primary-dull transition text-white text-base md:text-2xl"
       >
         <i className="ri-money-dollar-circle-line"></i> Convert
       </button>
 
 
-        <div className="w-full h-[30vh] border-2 border-primary rounded mt-8 px-3 py-4">
+        <div className="w-full h-[20vh] md:h-[30vh] border-2 border-primary rounded mt-2 md:mt-6 px-3 py-1 md:py-4">
             {convertedAmount && (
-        <div className="text-xl font-medium flex items-center flex-col justify-between">
-          <p>Converted Amount{" "}</p>
-            <div className="text-primary text-4xl mt-2">{`${amount} ${fromCurrency} = ${convertedAmount} ${toCurrency}`}</div>
-          <p className="mt-3">Conversion Rate{" "}</p>
-            <div className="text-primary text-4xl mt-2">{`${amount/amount} ${fromCurrency} = ${conversionRate} ${toCurrency}`}</div>
+        <div className="font-medium flex items-center flex-col justify-between">
+          <p className="text-lg md:text-4xl">Converted Amount{" "}</p>
+            <div className="text-primary text-lg md:text-3xl">{`${amount} ${fromCurrency} = ${convertedAmount} ${toCurrency}`}</div>
+          <p className="mt-1 text-lg md:text-4xl md:mt-4">Conversion Rate{" "}</p>
+            <div className="text-primary text-lg md:text-3xl">{`${amount/amount} ${fromCurrency} = ${conversionRate} ${toCurrency}`}</div>
         </div>
       )}
         </div>

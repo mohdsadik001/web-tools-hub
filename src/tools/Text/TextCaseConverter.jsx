@@ -34,31 +34,31 @@ const TextCaseConverter = () => {
 
   const [text, setText] = useState("");
   return (
-    <div className="mt-16 flex flex-col px-6 md:px-16 lg:px-24 xl:px-32 py-4">
+    <div className="mt-2 md:mt-16 flex flex-col px-6 md:px-16 lg:px-24 xl:px-32 py-4">
       <div className="flex flex-col items-end w-max">
-        <p className="text-2xl font-medium uppercase">Case Converter</p>
+        <p className="text-xl md:text-2xl font-medium uppercase">Case Converter</p>
         <div className="w-16 h-0.5 bg-primary rounded-full"></div>
       </div>
 
-      <div className="flex gap-3 w-full items-center justify-between mt-3">
-          <button onClick={sentenceCase} className='cursor-pointer px-6 py-2 mt-2 bg-white hover:bg-primary hover:text-white border-2 border-primary transition text-primary rounded-full text-xl'>Sentence case</button>
-          <button onClick={upperCase} className='cursor-pointer px-6 py-2 mt-2 bg-white hover:bg-primary hover:text-white border-2 border-primary transition text-primary rounded-full text-xl'>UPPER CASE</button>
-          <button onClick={lowerCase} className='cursor-pointer px-6 py-2 mt-2 bg-white hover:bg-primary hover:text-white border-2 border-primary transition text-primary rounded-full text-xl'>lower case</button>
-          <button onClick={titleCase} className='cursor-pointer px-6 py-2 mt-2 bg-white hover:bg-primary hover:text-white border-2 border-primary transition text-primary rounded-full text-xl'>Title Case</button>
-          <button onClick={mixedCase} className='cursor-pointer px-6 py-2 mt-2 bg-white hover:bg-primary hover:text-white border-2 border-primary transition text-primary rounded-full text-xl'>MiXEd cAsE</button>
-          <button onClick={inverseCase} className='cursor-pointer px-6 py-2 mt-2 bg-white hover:bg-primary hover:text-white border-2 border-primary transition text-primary rounded-full text-xl'>iNvErSe cAsE</button>
+      <div className="grid grid-cols-2 grid-rows-3 gap-1 md:grid-cols-3 md:grid-rows-2 text-nowrap  w-full items-center justify-between mt-3">
+          <button onClick={sentenceCase}    className='cursor-pointer px-3 py-2 mt-2 bg-white hover:bg-primary hover:text-white border-2 border-primary transition text-primary rounded-full text-md md:text-xl'>Sentence case</button>
+          <button onClick={upperCase}       className='cursor-pointer px-3 py-2 mt-2 bg-white hover:bg-primary hover:text-white border-2 border-primary transition text-primary rounded-full text-md md:text-xl'>UPPER CASE</button>
+          <button onClick={lowerCase}       className='cursor-pointer px-3 py-2 mt-2 bg-white hover:bg-primary hover:text-white border-2 border-primary transition text-primary rounded-full text-md md:text-xl'>lower case</button>
+          <button onClick={titleCase}       className='cursor-pointer px-3 py-2 mt-2 bg-white hover:bg-primary hover:text-white border-2 border-primary transition text-primary rounded-full text-md md:text-xl'>Title Case</button>
+          <button onClick={mixedCase}       className='cursor-pointer px-3 py-2 mt-2 bg-white hover:bg-primary hover:text-white border-2 border-primary transition text-primary rounded-full text-md md:text-xl'>MiXEd cAsE</button>
+          <button onClick={inverseCase}     className='cursor-pointer px-3 py-2 mt-2 bg-white hover:bg-primary hover:text-white border-2 border-primary transition text-primary rounded-full text-md md:text-xl'>iNvErSe cAsE</button>
       </div>
       
       <textarea
         onChange={(e) => {
           setText(e.target.value);
         }}
-        className="border-1 border-gray-400 px-4 py-2 text-xl font-light rounded mt-4 outline-primary text-justify"
+        className="border-1 border-gray-400 px-2 md:px-4 py-2 text-base md:text-xl font-light rounded mt-4 outline-primary text-justify"
         value={text}
         type="text"
         placeholder="Enter your text..."
         required
-        rows={15}
+        rows={10}
         cols={30}
         // maxLength={300}
       ></textarea>
@@ -67,8 +67,8 @@ const TextCaseConverter = () => {
         
         
           <div className="flex items-center mt-3 gap-5 w-full">
-            <button onClick={()=> setText("")} className='flex gap-4 items-center justify-center cursor-pointer w-full px-6 py-2 mt-2 bg-primary hover:bg-primary-dull transition text-white rounded text-xl'><i class="ri-brush-2-line"></i> Reset</button>
-            <button onClick={()=>  navigator.clipboard.writeText(text).then(() => alert("Copied!"))} className='flex gap-4 items-center justify-center cursor-pointer w-full px-6 py-2 mt-2 bg-primary hover:bg-primary-dull transition text-white rounded text-xl'><i class="ri-clipboard-line"></i> Copy Text</button>
+            <button onClick={()=> setText("")}                                                       className='flex gap-1 md:gap-4 items-center justify-center cursor-pointer w-full px-2 md:px-6 py-2 mt-1 md:mt-2 bg-primary hover:bg-primary-dull transition text-white rounded text-md md:text-xl'><i class="ri-brush-2-line"></i> Reset</button>
+            <button onClick={()=>  navigator.clipboard.writeText(text).then(() => alert("Copied!"))} className='flex gap-1 md:gap-4 items-center justify-center cursor-pointer w-full px-2 md:px-6 py-2 mt-1 md:mt-2 bg-primary hover:bg-primary-dull transition text-white rounded text-md md:text-xl'><i class="ri-clipboard-line"></i> Copy Text</button>
           </div>
       
     </div>

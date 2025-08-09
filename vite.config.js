@@ -6,8 +6,11 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(),
     tailwindcss(),
-    require('@tailwindcss/typography'),
   ],
+  server: {
+    host: '0.0.0.0', // 👈 allows all devices in network to access
+    port: 5173       // (or whatever port you want)
+  }
 })
 
 
