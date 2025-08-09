@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import AllTools from "./pages/AllTools";
 import BuyCoffee from "./pages/BuyCoffee";
@@ -47,7 +47,8 @@ const App = () => {
           <Route path="/tools/utility/timestamp-converter" element={<TimestampConverter/>} />
           <Route path="/tools/utility/qr-code-generator" element={<QrCodeGenerator/>} />
           <Route path="/tools/utility/unit-converter" element={<UnitConverterLayout/>}>
-              <Route index element={<LengthConverter/>} />
+              <Route index element={<Navigate to="/tools/utility/unit-converter/length" replace />} />
+              <Route path="/tools/utility/unit-converter/length" element={<LengthConverter/>} />
               <Route path="/tools/utility/unit-converter/tempreture" element={<TempretureConverter/>} />
               <Route path="/tools/utility/unit-converter/time" element={<TimeConverter/>} />
               <Route path="/tools/utility/unit-converter/area" element={<AreaConverter/>} />
