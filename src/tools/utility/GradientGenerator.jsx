@@ -68,13 +68,13 @@ const GradientGenerator = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-6 text-center text-primary">
+    <div className="max-w-4xl mx-auto p-4">
+      <h1 className="text-2xl md:text-3xl font-bold mb-6 text-center text-primary">
         🎨 Gradient Generator
       </h1>
 
       {/* Direction selector */}
-      <div className="mb-4 flex flex-wrap gap-3 justify-center">
+      <div className="mb-4 grid grid-cols-2 gap-2 md:gap-4 justify-center">
         {directions.map((dir) => (
           <button
             key={dir.value}
@@ -116,7 +116,7 @@ const GradientGenerator = () => {
         <button
           onClick={addColor}
           disabled={colors.length >= 6}
-          className={`px-4 py-2 border border-primary rounded text-primary hover:bg-primary hover:text-white transition select-none ${
+          className={`px-4 py-1 border border-primary rounded text-primary hover:bg-primary hover:text-white transition select-none ${
             colors.length >= 6 ? "opacity-50 cursor-not-allowed" : ""
           }`}
           title="Add color"
@@ -144,7 +144,7 @@ const GradientGenerator = () => {
           aria-label="CSS Gradient code"
         />
 
-        <div className="flex gap-3">
+        <div className="flex items-center justify-between gap-3">
           <button
             onClick={copyCss}
             className="bg-primary text-white px-4 py-2 rounded hover:bg-primary-dull transition"

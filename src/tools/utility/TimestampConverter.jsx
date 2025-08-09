@@ -42,12 +42,12 @@ const TimestampConverter = () => {
   };
 
   return (
-    <div className="px-4 py-8 md:px-10 lg:px-16 xl:px-24 max-w-4xl mx-auto mt-12 bg-white rounded-xl shadow-lg">
-      <h2 className="text-3xl font-bold text-center text-primary mb-8">
+    <div className="px-4 py-2 md:py-6 md:px-10 lg:px-16 xl:px-24 max-w-4xl mx-auto mt-2 md:mt-12 bg-white rounded-xl shadow-lg">
+      <h2 className="text-2xl md:text-3xl font-bold text-center text-primary mb-6">
         ⏱️ Timestamp Converter
       </h2>
 
-      <div className="space-y-6">
+      <div className="space-y-4 md:space-y-6">
         <div>
           <label className="block text-base font-medium mb-1">
             🔢 UNIX Timestamp
@@ -76,7 +76,7 @@ const TimestampConverter = () => {
           />
         </div>
 
-        <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center mt-6">
+        <div className="grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-4">
           <button
             onClick={handleNow}
             className="px-5 py-3 bg-blue-600 text-white text-sm sm:text-base rounded-lg hover:bg-blue-700 transition w-full sm:w-auto"
@@ -97,7 +97,7 @@ const TimestampConverter = () => {
           </button>
         </div>
 
-        <div className="mt-4 text-center text-lg text-gray-600">
+        <div className="mt-4 text-center text-lg text-gray-600 bg-gray-200 p-2 md:p-4 rounded">
           {timestamp && dateStr && (
             <>
               <p>

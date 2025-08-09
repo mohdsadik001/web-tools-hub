@@ -60,7 +60,7 @@ const PasswordGenerator = () => {
   return (
     <div className="h-[92vh] flex flex-col justify-center items-center bg-gradient-to-br from-indigo-50 to-purple-100 px-4 py-12">
       <div className="bg-white shadow-lg rounded-xl p-8 max-w-lg w-full">
-        <h2 className="text-3xl font-bold text-center text-primary mb-6">
+        <h2 className="text-xl md:text-3xl font-bold text-center text-primary mb-6">
           🔐 Password Generator
         </h2>
 
@@ -133,11 +133,11 @@ const PasswordGenerator = () => {
 
         {/* Password Display */}
         {password && (
-          <div className="mt-6 p-4 bg-gray-100 rounded-lg flex items-center justify-between font-mono text-lg break-all select-all">
-            <span>{password}</span>
+          <div className="mt-6 p-2 md:p-4 bg-gray-100 rounded-lg flex flex-col gap-2 md:flex-row items-center  md:justify-between font-mono text-lg break-all select-all">
+            <span className="w-full text-center overflow-scroll">{password}</span>
             <button
               onClick={copyToClipboard}
-              className="ml-4 text-white hover:bg-primary-dull bg-primary px-2 py-1 rounded cursor-pointer"
+              className="text-white w-full hover:bg-primary-dull bg-primary md:px-4 py-1 rounded cursor-pointer"
               title="Copy to clipboard"
             >
               📋 Copy

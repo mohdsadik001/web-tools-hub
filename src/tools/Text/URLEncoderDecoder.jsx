@@ -41,12 +41,12 @@ const UrlEncoderDecoder = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-6 bg-white rounded shadow-md mt-12">
-      <h2 className="text-3xl font-bold mb-6 text-center text-primary">
+    <div className="mt-2 md:mt-12 max-w-3xl mx-auto p-4 bg-white rounded shadow-md">
+      <h2 className="text-xl md:text-3xl font-bold mb-4 text-center text-primary">
         🔗 URL Encoder / Decoder
       </h2>
 
-      <div className="flex justify-center mb-6 space-x-4">
+      <div className="flex justify-center mb-2 md:mb-6 space-x-4">
         <button
           onClick={() => handleModeChange("encode")}
           className={`px-6 py-2 rounded ${
@@ -78,20 +78,20 @@ const UrlEncoderDecoder = () => {
             ? "Enter text to encode..."
             : "Enter URL encoded text to decode..."
         }
-        className="w-full border border-gray-300 rounded p-4 mb-4 resize-none focus:outline-primary focus:ring-2 focus:ring-primary"
+        className="w-full border border-gray-300 rounded p-2 md:p-4 mb-2 md:mb-4 resize-none focus:outline-primary focus:ring-2 focus:ring-primary"
       />
 
-      <div className="mb-4">
+      <div className="mb-2 md:mb-4">
         <label className="block font-semibold mb-1">Result:</label>
         <textarea
           readOnly
           value={output}
           rows={6}
-          className="w-full border border-gray-300 rounded p-4 resize-none bg-gray-50"
+          className="w-full border border-gray-300 rounded p-2 md:p-4 resize-none bg-gray-50"
         />
       </div>
 
-      <div className="flex space-x-4 justify-center">
+      <div className="flex space-x-2 md:space-x-4 justify-center">
         <button
           onClick={copyToClipboard}
           disabled={!output}

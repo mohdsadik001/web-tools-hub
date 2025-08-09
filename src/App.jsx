@@ -47,7 +47,7 @@ const App = () => {
           <Route path="/tools/utility/timestamp-converter" element={<TimestampConverter/>} />
           <Route path="/tools/utility/qr-code-generator" element={<QrCodeGenerator/>} />
           <Route path="/tools/utility/unit-converter" element={<UnitConverterLayout/>}>
-              <Route path="/tools/utility/unit-converter/length" element={<LengthConverter/>} />
+              <Route index element={<LengthConverter/>} />
               <Route path="/tools/utility/unit-converter/tempreture" element={<TempretureConverter/>} />
               <Route path="/tools/utility/unit-converter/time" element={<TimeConverter/>} />
               <Route path="/tools/utility/unit-converter/area" element={<AreaConverter/>} />
